@@ -41,6 +41,7 @@ function init () {
 	window.Telegram.WebApp.MainButton
 		.setText('Ok')
 		.onClick(sendTicket)
+        window.Telegram.WebApp.showAlert("Инит")
 }
 
 function sendTicket () {
