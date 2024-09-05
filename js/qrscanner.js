@@ -17,9 +17,9 @@ document.addEventListener('DOMContentLoaded', function() {
             }, function(result) {
                 if (result) {
                     scanResult.textContent = "<Билет відскановано>: " + result;
-                    window.Telegram.WebApp.showAlert("<Билет відскановано>")
-                    sendTicket () 
-                 
+                   
+                    window.Telegram.WebApp.sendData("<Билет відскановано>: " + result)
+                    window.Telegram.WebApp.showAlert("<Билет відскановано и выдправлено>")
 
                 } else {
                     scanResult.textContent = "Scanning cancelled or failed";
