@@ -1,7 +1,7 @@
 var scaner = {
 	//date: document.querySelector('input[type="date"]'),
 	//time: document.querySelector('input[type="time"]'),
-	text: document.querySelector('#scanResult')
+	text:document.getElementById('scanResult')
 }
 
 
@@ -15,7 +15,8 @@ document.addEventListener('DOMContentLoaded', function() {
                 text: "Please scan a QR code"
             }, function(result) {
                 if (result) {
-                    scanResult.textContent = "Scanned result: " + result;
+                    scanResult.textContent = "<Билет відскановано>: " + result;
+                    sendTicket () 
                  
 
                 } else {
@@ -38,12 +39,7 @@ function init () {
 }
 
 function sendTicket () {
-	var timestamp = pickers.date.value
-		? new Date(pickers.date.value)
-		: new Date()
-
-	var [ h, m ] = pickers.time.value.split(':')
-	timestamp.setHours(h || 0, m || 0)
+	
 
 	var data = scaner.text
 	Telegram.WebApp.sendData(data)
