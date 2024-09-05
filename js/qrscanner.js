@@ -6,6 +6,7 @@ var scaner = {
 
 
 document.addEventListener('DOMContentLoaded', function() {
+    init ()
     const scanButton = document.getElementById('scanButton');
     const scanResult = document.getElementById('scanResult');
 
@@ -33,8 +34,8 @@ document.addEventListener('DOMContentLoaded', function() {
 function init () {
 	//setupOptions()
 
-	Telegram.WebApp.ready()
-	Telegram.WebApp.MainButton
+	window.Telegram.WebApp.ready()
+	window.Telegram.WebApp.MainButton
 		.setText('Ok')
 		.onClick(sendTicket)
 }
@@ -43,5 +44,5 @@ function sendTicket () {
 	
 
 	var data = scaner.text
-	Telegram.WebApp.sendData(data)
+	window.Telegram.WebApp.sendData(data)
 }
