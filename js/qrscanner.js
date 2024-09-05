@@ -21,8 +21,11 @@ document.addEventListener('DOMContentLoaded', function() {
                     window.Telegram.WebApp.sendData("<Билет відскановано>: " + result)
                     window.Telegram.WebApp.showAlert("<Билет відскановано и выдправлено>")
 
+                    return true
                 } else {
                     scanResult.textContent = "Scanning cancelled or failed";
+                    window.Telegram.WebApp.showAlert("Scanning cancelled or failed")
+                    return true
                 }
             });
         } else {
@@ -43,6 +46,6 @@ function init () {
 function sendTicket () {
 	
 
-	var data = scaner.text
+	var data = scaner.textContent
 	window.Telegram.WebApp.sendData(data)
 }
