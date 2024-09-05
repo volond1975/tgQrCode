@@ -12,7 +12,7 @@ document.addEventListener('DOMContentLoaded', function() {
     scanButton.addEventListener('click', function() {
         if (window.Telegram && window.Telegram.WebApp) {
             window.Telegram.WebApp.showScanQrPopup({
-                text: "Please scan a QR code"
+                text: "Отсканировать QR Code"
             }, function(result) {
                 if (result) {
                     scanResult.textContent = "<Билет відскановано>: " + result;
