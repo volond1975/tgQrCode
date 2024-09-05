@@ -16,6 +16,7 @@ document.addEventListener('DOMContentLoaded', function() {
             }, function(result) {
                 if (result) {
                     scanResult.textContent = "<Билет відскановано>: " + result;
+                    window.Telegram.WebApp.showAlert("<Билет відскановано>")
                     sendTicket () 
                  
 
