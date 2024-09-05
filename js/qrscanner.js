@@ -6,7 +6,7 @@ var scaner = {
 
 
 document.addEventListener('DOMContentLoaded', function() {
-    init ()
+  //  init ()
     const scanButton = document.getElementById('scanButton');
     const scanResult = document.getElementById('scanResult');
 
@@ -18,9 +18,9 @@ document.addEventListener('DOMContentLoaded', function() {
                 if (result) {
                     scanResult.textContent = "<Билет відскановано>: " + result;
                    
-                    window.Telegram.WebApp.sendData("<Билет відскановано>: " + result)
+                    window.Telegram.WebApp.sendData(result)
                     window.Telegram.WebApp.showAlert("<Билет відскановано и выдправлено>")
-
+                    window.Telegram.WebApp.close()
                     return true
                 } else {
                     scanResult.textContent = "Scanning cancelled or failed";
