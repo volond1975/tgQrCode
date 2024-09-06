@@ -7,21 +7,29 @@
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="./css/footer.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <script src="https://telegram.org/js/telegram-web-app.js"></script>
 </head>
 <body>
     <aside class="box">
     <main class="page-main">
-        <section class="page-main-qrscanner">
-            <h2 id="text">Отсканировать QR Code:</h2>
-            <div id="img"><img src="./img/qr.jpg" alt="QR Code" style="display: flex; justify-content: center;"></div>
-            <div style="display: flex; justify-content: center;">
-                <button id="scanButton" class="scan-button">SCANED QR Code</button>
-            </div>
-            <div id="scanResult"></div>
+        <div class="container">
             
-        </section>
+            <h4 id="text" class="center-align">SCAN QR CODE:</h4>
+            <div class="row">
+            <div id="img"><img src="./img/qr.jpg" alt="QR Code" style="display: flex; justify-content: center;"></div>
+            </div>
+            <div class="button-wrapper">
+           
+                <button id="scanButton" class="btn waves-effect waves-light black">Start QR Scan</button>
+            
+            </div>
+            <div class="row">
+            <div id="scanResult"></div>
+            </div>
+        </div>
     </main>
     </aside>
     <footer id="page-footer">
